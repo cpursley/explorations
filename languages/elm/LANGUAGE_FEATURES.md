@@ -29,8 +29,6 @@
 
 - http://blog.noredink.com/post/140646140878/data-structures-in-elm  
 - https://lucamug.github.io/data-structures-in-elm
-
-
 - [List](http://elmprogramming.com/list.html)
 - [Array](http://elmprogramming.com/array.html)
 - [Tuple](http://elmprogramming.com/tuple.html)
@@ -73,22 +71,3 @@
 
 - http://www.lambdacat.com/road-to-elm-let-and-in
 - http://elmprogramming.com/let-expression.html
-
-
-### Messages
-
-- https://guide.elm-lang.org/architecture/effects
-- https://www.elm-tutorial.org/en/02-elm-arch/03-messages.html
-
-
-### Subscriptions & Commands
-
-- https://www.dailydrip.com/blog/what-are-subscriptions-and-commands-in-elm.html
-- http://elmprogramming.com/commands.html
-- https://www.elm-tutorial.org/en/03-subs-cmds/01-subs.html
-
-
-### Modules
-
-- http://elmprogramming.com/easier-code-organization.html
-- https://www.elm-tutorial.org/en/01-foundations/04-imports-and-modules.html

@@ -67,6 +67,12 @@
 - http://elmprogramming.com/pattern-matching.html
 
 
+## Destructuring
+
+- http://www.lambdacat.com/road-to-elm-destructuring
+- https://gist.github.com/yang-wei/4f563fbf81ff843e8b1e
+
+
 ### Let
 
 - http://www.lambdacat.com/road-to-elm-let-and-in

@@ -3,4 +3,5 @@ A place to explore new languages and technologies
 
 ### Languages
 
-* JavaScript
+* [JavaScript](languages/javascript)
+* [Elm](languages/elm)

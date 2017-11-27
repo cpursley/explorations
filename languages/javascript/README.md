@@ -1,13 +1,15 @@
-# JavaScript
+# [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-### Free Code Camp
 
-[www.freecodecamp.org](https://www.freecodecamp.org)
+### Exercises
 
-#### Challenges
+#### [Free Code Camp Challenges](https://www.freecodecamp.org)
 
-* [x] Basic JavaScript
-* [x] Object Oriented and Functional Programming
-* [ ] Basic Algorithm Scripting
-* [ ] Intermediate Algorithm Scripting
-* [ ] Advanced Algorithm Scripting
+* [x] [Basic JavaScript](https://www.freecodecamp.org/map-aside#nested-collapseBasicJavaScript)
+* [x] [Object Oriented and Functional Programming](https://www.freecodecamp.org/map-aside#nested-collapseObjectOrientedandFunctionalProgramming)
+* [ ] [Basic Algorithm Scripting](https://www.freecodecamp.org/map-aside#nested-collapseBasicAlgorithmScripting)
+* [ ] [Intermediate Algorithm Scripting](https://www.freecodecamp.org/map-aside#nested-collapseIntermediateAlgorithmScripting)
+* [ ] [Advanced Algorithm Scripting](https://www.freecodecamp.org/map-aside#nested-collapseAdvancedAlgorithmScripting)
+
+
+### Tutorials

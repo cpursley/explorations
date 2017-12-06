@@ -35,5 +35,6 @@
 
 ### Unorganized
 
-https://github.com/halfzebra/web-development-with-elm
-https://github.com/Elm-Detroit/elm-workshop/tree/master/part1
+- [Architecture](https://gist.github.com/evancz/2b2ba366cae1887fe621)
+- [Best Practices](https://gist.github.com/rofrol/fd46e9570728193fddcc234094a0bd99)
+- [Style Guide](https://github.com/NoRedInk/elm-style-guide)

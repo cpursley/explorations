@@ -5,3 +5,4 @@ A place to explore new languages and technologies
 
 * [JavaScript](languages/javascript)
 * [Elm](languages/elm)
+* [Elixir](languages/elixir)

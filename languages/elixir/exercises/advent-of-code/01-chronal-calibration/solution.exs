@@ -32,7 +32,6 @@ defmodule ChronalCalibration do
   @doc """
   Desc:
     Open file with map_frequency_from_file and apply calculate_frequency
-  Refs:
   """
   def calculate_frequency_from_file(file_name) do
     file_name
@@ -42,8 +41,9 @@ defmodule ChronalCalibration do
 
   @doc """
   Desc:
-    Open file with map_frequency_from_file, cycle through list, add each
-    value to previous accumulated value and insert into new list (scan).
+    Open file with map_frequency_from_file, infinitely iterate through list (cycle),
+    add each value to previous accumulated value and insert into new list (scan).
+    Apply reduce_until_frequency_repeated to find duplicate frequency and halt.
   Refs:
     Stream.cycle: https://hexdocs.pm/elixir/Stream.html#cycle/1
     Stream.scan:  https://hexdocs.pm/elixir/Stream.html#scan/2

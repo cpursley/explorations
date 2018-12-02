@@ -19,7 +19,7 @@ defmodule ChronalCalibration do
 
   @doc """
   Desc:
-    Add each value to previous accumulated value and return result
+    Add each value to previous accumulated value (reduce) and return result
   Refs:
     Enum.reduce: https://hexdocs.pm/elixir/Enum.html#reduce/2
   """
@@ -31,7 +31,7 @@ defmodule ChronalCalibration do
 
   @doc """
   Desc:
-    Opens file with map_frequency_from_file and applies calculate_frequency
+    Open file with map_frequency_from_file and apply calculate_frequency
   Refs:
   """
   def calculate_frequency_from_file(file_name) do
@@ -43,8 +43,8 @@ defmodule ChronalCalibration do
   @doc """
   Desc:
     Open file with map_frequency_from_file, cycle through list, add each value
-    to previous accumulated value and insert into new list. Reduce list down
-    with MapSet as accumulator and halt once a duplicate member value is found
+    to previous accumulated value and insert into new list (scan). Reduce list
+    down with MapSet as accumulator and halt once duplicate (member) value found
   Refs:
     Stream.cycle:      https://hexdocs.pm/elixir/Stream.html#cycle/1
     Stream.scan:       https://hexdocs.pm/elixir/Stream.html#scan/2
@@ -56,11 +56,10 @@ defmodule ChronalCalibration do
       |> map_frequency_from_file
       |> Stream.cycle
       |> Stream.scan(0, &+/2)
-      |> Enum.reduce_while(MapSet.new(), fn frequency, map_set ->
-           if MapSet.member?(map_set, frequency) do
-             {:halt, frequency}
-           else
-             {:cont, MapSet.put(map_set, frequency)}
+      |> Enum.reduce_while(MapSet.new, fn frequency, map_set ->
+           case MapSet.member?(map_set, frequency) do
+             true  -> {:halt, frequency}
+             false -> {:cont, MapSet.put(map_set, frequency)}
            end
          end)
       |> IO.inspect

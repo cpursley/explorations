@@ -44,7 +44,7 @@ defmodule ChronalCalibration do
   Desc:
     Open file with map_frequency_from_file, cycle through list, add each value
     to previous accumulated value and insert into new list (scan). Reduce list
-    down with MapSet as accumulator and halt once duplicate (member) value found
+    into new accumulator (MapSet) and halt once duplicate (member) value found
   Refs:
     Stream.cycle:      https://hexdocs.pm/elixir/Stream.html#cycle/1
     Stream.scan:       https://hexdocs.pm/elixir/Stream.html#scan/2

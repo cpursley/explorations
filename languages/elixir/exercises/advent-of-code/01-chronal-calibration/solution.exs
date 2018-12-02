@@ -42,27 +42,35 @@ defmodule ChronalCalibration do
 
   @doc """
   Desc:
-    Open file with map_frequency_from_file, cycle through list, add each value
-    to previous accumulated value and insert into new list (scan). Reduce list
-    into new accumulator (MapSet) and halt once duplicate (member) value found
+    Open file with map_frequency_from_file, cycle through list, add each
+    value to previous accumulated value and insert into new list (scan).
   Refs:
-    Stream.cycle:      https://hexdocs.pm/elixir/Stream.html#cycle/1
-    Stream.scan:       https://hexdocs.pm/elixir/Stream.html#scan/2
-    Enum.reduce_while: https://hexdocs.pm/elixir/Enum.html#reduce_while/3
-    MapSet:            https://hexdocs.pm/elixir/MapSet.html
+    Stream.cycle: https://hexdocs.pm/elixir/Stream.html#cycle/1
+    Stream.scan:  https://hexdocs.pm/elixir/Stream.html#scan/2
   """
   def calculate_first_frequency_from_file(file_name) do
     file_name
       |> map_frequency_from_file
       |> Stream.cycle
       |> Stream.scan(0, &+/2)
-      |> Enum.reduce_while(MapSet.new, fn frequency, map_set ->
-           case MapSet.member?(map_set, frequency) do
-             true  -> {:halt, frequency}
-             false -> {:cont, MapSet.put(map_set, frequency)}
-           end
-         end)
+      |> reduce_until_frequency_repeated
       |> IO.inspect
+  end
+
+  @doc """
+  Desc:
+    Reduce into new accumulator (MapSet) and halt once duplicate (member) found
+  Refs:
+    Enum.reduce_while: https://hexdocs.pm/elixir/Enum.html#reduce_while/3
+    MapSet:            https://hexdocs.pm/elixir/MapSet.html
+  """
+  def reduce_until_frequency_repeated(frequency_list) do
+    Enum.reduce_while(frequency_list, MapSet.new, fn frequency, map_set ->
+      case MapSet.member?(map_set, frequency) do
+       true  -> {:halt, frequency}
+       false -> {:cont, MapSet.put(map_set, frequency)}
+      end
+    end)
   end
 end
 

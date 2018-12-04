@@ -1,4 +1,5 @@
 # https://adventofcode.com/2018/day/1
+# José Valim's solution: https://gist.github.com/josevalim/ea4bf4fb5a009d33ff37f406e25c4749
 
 # --- Day 1: Chronal Calibration ---
 
@@ -41,6 +42,22 @@ defmodule ChronalCalibration do
 
   @doc """
   Desc:
+    Reduce into new accumulator (MapSet) and halt once duplicate (member) found
+  Refs:
+    Enum.reduce_while: https://hexdocs.pm/elixir/Enum.html#reduce_while/3
+    MapSet:            https://hexdocs.pm/elixir/MapSet.html
+  """
+  def reduce_until_frequency_repeated(frequency_list) do
+    Enum.reduce_while(frequency_list, MapSet.new, fn frequency, map_set ->
+      case MapSet.member?(map_set, frequency) do
+       true  -> {:halt, frequency}
+       false -> {:cont, MapSet.put(map_set, frequency)}
+      end
+    end)
+  end
+
+  @doc """
+  Desc:
     Open file with map_frequency_from_file, infinitely iterate through list (cycle),
     add each value to previous accumulated value and insert into new list (scan).
     Apply reduce_until_frequency_repeated to find duplicate frequency and halt.
@@ -55,22 +72,6 @@ defmodule ChronalCalibration do
       |> Stream.scan(0, &+/2)
       |> reduce_until_frequency_repeated
       |> IO.inspect
-  end
-
-  @doc """
-  Desc:
-    Reduce into new accumulator (MapSet) and halt once duplicate (member) found
-  Refs:
-    Enum.reduce_while: https://hexdocs.pm/elixir/Enum.html#reduce_while/3
-    MapSet:            https://hexdocs.pm/elixir/MapSet.html
-  """
-  def reduce_until_frequency_repeated(frequency_list) do
-    Enum.reduce_while(frequency_list, MapSet.new, fn frequency, map_set ->
-      case MapSet.member?(map_set, frequency) do
-       true  -> {:halt, frequency}
-       false -> {:cont, MapSet.put(map_set, frequency)}
-      end
-    end)
   end
 end
 

@@ -17,6 +17,7 @@
 
 - [Elixir Examples](https://elixir-examples.github.io/) (solutions for various problems in Elixir)
 - [Elixir cheatsheet](https://devhints.io/elixir) (more examples)
+- [30 Days of Elixir](https://github.com/seven1m/30-days-of-elixir)
 
 #### Video
 
@@ -25,11 +26,11 @@
 - [ElixirCasts](https://elixircasts.io/) (free & paid ~ short tutorials in similar spirit as Railscasts)
 - [Alchemist Camp](https://alchemist.camp/start) (free & paid ~ resources for learning Elixir)
 
+https://codestool.coding-gnome.com/courses/elixir-for-programmers
+
 ### Exercises
 
-- [Advent Of Code](exercises/advent-of-code)
-- [Elixir Koans](https://github.com/iamvery/elixir-koans )
+- [Elixir Koans](http://elixirkoans.io)
 - [Exercism](https://exercism.io/tracks/elixir)
-- [30 Days of Elixir](https://github.com/seven1m/30-days-of-elixir)
 - Free Code Camp Problems
-- Ninety-nine Problems
+- [Advent Of Code](exercises/advent-of-code)

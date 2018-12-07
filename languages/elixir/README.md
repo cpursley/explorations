@@ -30,6 +30,7 @@ https://codestool.coding-gnome.com/courses/elixir-for-programmers
 
 ### Exercises
 
+- [Elixir Koans](http://elixirkoans.io): [solutions](exercises/elixir-koans)
 - [Exercism](https://exercism.io/tracks/elixir): [solutions](exercises/exercism)
 - [Code Wars](https://www.codewars.com/?language=elixir)
 - Free Code Camp Problems

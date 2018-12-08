@@ -1,16 +1,17 @@
 defmodule Bob do
   def hey(input) do
+    is_string_all_caps =
+      input
+        |> String.replace(~r/[\d,? ]/, "")
+        |> String.match?(~r/^[^a-z]+$/)
+
     cond do
-      Regex.match?(~r/^ *$/, input) ->
+      String.match?(input, ~r/^ *$/) ->
         "Fine. Be that way!"
-      Regex.match?(~r/^((?![\p{L}]).)*$/, input) ->
-        if String.ends_with?(input, "?"), do: "Sure.", else: "Whatever."
-      Regex.match?(~r/^[^a-z]*$/, input) ->
-        if String.ends_with?(input, "?") do
-          "Calm down, I know what I'm doing!"
-        else
-          "Whoa, chill out!"
-        end
+      is_string_all_caps && String.ends_with?(input, "?") ->
+        "Calm down, I know what I'm doing!"
+      is_string_all_caps ->
+        "Whoa, chill out!"
       String.ends_with?(input, "?") ->
         "Sure."
       true ->

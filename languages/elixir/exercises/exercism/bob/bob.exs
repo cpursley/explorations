@@ -1,21 +1,26 @@
 defmodule Bob do
-  def hey(input) do
-    is_string_all_caps =
-      input
-        |> String.replace(~r/[\d,? ]/, "")
-        |> String.match?(~r/^[^a-z]+$/)
+  import String
 
+  def hey(input) do
     cond do
-      String.match?(input, ~r/^ *$/) ->
+      silence?(input) ->
         "Fine. Be that way!"
-      is_string_all_caps && String.ends_with?(input, "?") ->
+      shouting_question?(input) ->
         "Calm down, I know what I'm doing!"
-      is_string_all_caps ->
+      shouting?(input) ->
         "Whoa, chill out!"
-      String.ends_with?(input, "?") ->
+      question?(input) ->
         "Sure."
       true ->
         "Whatever."
     end
   end
+
+  def silence?(input), do: trim(input) == ""
+
+  def shouting?(input), do: input != downcase(input) && input == upcase(input)
+
+  def shouting_question?(input), do: shouting?(input) && question?(input)
+
+  def question?(input), do: ends_with?(input, "?")
 end

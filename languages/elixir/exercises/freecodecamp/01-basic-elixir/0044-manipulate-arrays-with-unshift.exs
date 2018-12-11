@@ -1,14 +1,14 @@
 # URL: https://www.freecodecamp.org/challenges/manipulate-arrays-with-unshift
 
 # Example
-var ourArray = ["Stimpson", "J", "cat"];
-ourArray.shift(); # ourArray now equals ["J", "cat"]
-ourArray.unshift("Happy");
-# ourArray now equals ["Happy", "J", "cat"]
+our_list = ["Stimpson", "J", "cat"]
+our_list
+  |> List.delete_at(0)           # => ["J", "cat"]
+  |> List.insert_at(0, "Happy")  # => ["Happy", "J", "cat"]
 
 # Setup
-var myArray = [["John", 23], ["dog", 3]];
-myArray.shift();
+my_list = [["John", 23], ["dog", 3]]
 
-# Only change code below this line.
-myArray.unshift(["Paul", 35]);
+my_list
+  |> List.delete_at(0)               # => [["dog", 3]]
+  |> List.insert_at(0, ["Paul", 35]) # => [["Paul", 35], ["dog", 3]]

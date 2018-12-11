@@ -1,11 +1,15 @@
 # URL: https://www.freecodecamp.org/challenges/access-array-data-with-indexes
 
+# In Elixir, use Enum.at([1, 2, 3], 0) to access a List item by index
+
 # Example
-var ourArray = [1,2,3];
-var ourData = ourArray[0]; # equals 1
+our_list = [1, 2, 3]
+our_data = Enum.at(our_list, 0)
+# => 1
 
 # Setup
-var myArray = [1,2,3];
+my_list = [1, 2, 3]
 
 # Only change code below this line.
-var myData = myArray[0]; 
+my_data = Enum.at(my_list, 0)
+# => 1

@@ -1,12 +1,15 @@
 # URL: https://www.freecodecamp.org/challenges/manipulate-arrays-with-pop
 
+# In Elixir, List.delete_at([1, 2, 3], 0) is used to remove items from a List
+
 # Example
-var ourArray = [1,2,3];
-var removedFromOurArray = ourArray.pop();
-# removedFromOurArray now equals 3, and ourArray now equals [1,2]
+our_list = [1, 2, 3]
+removed_from_our_list = List.delete_at(our_list, -1)
+# => [1,2]
 
 # Setup
-var myArray = [["John", 23], ["cat", 2]];
+my_list = [["John", 23], ["cat", 2]]
 
 # Only change code below this line.
-var removedFromMyArray = myArray.pop();
+removed_from_my_list = List.delete_at(my_list, -1)
+# => [["John", 23]]

@@ -1,13 +1,10 @@
 # URL: https://www.freecodecamp.org/challenges/word-blanks
 
-function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
-  # Your code below this line
-
-  result = "My " + myAdjective + " " + myNoun + " " + myVerb + " " + myAdverb + ".";
-
-  # Your code above this line
-  return result;
-}
+word_blanks =
+  fn(my_noun, my_adjective, my_verb, my_adverb) ->
+    "My #{my_adjective} #{my_noun} #{my_verb} #{my_adverb}."
+  end
 
 # Change the words here to test your function
-wordBlanks("dog", "big", "ran", "quickly");
+word_blanks.("dog", "big", "ran", "quickly")
+# => "My big dog ran quickly."

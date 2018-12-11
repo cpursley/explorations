@@ -1,7 +1,10 @@
 # URL: https://www.freecodecamp.org/challenges/store-multiple-values-in-one-variable-using-javascript-arrays
 
+# In Elixir, the equivalent of a JavaScript array is a List:
+# https://hexdocs.pm/elixir/List.html
+
 # Example
-var ourArray = ["John", 23];
+our_list = ["John", 23]
 
 # Only change code below this line.
-var myArray = ["Chase", 32];
+my_list = ["Chase", 32]

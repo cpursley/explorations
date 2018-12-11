@@ -1,12 +1,16 @@
 # URL: https://www.freecodecamp.org/challenges/modify-array-data-with-indexes
 
+# In Elixir, use List.replace_at([1, 2, 3], 0, 0) to replace a List item by index
+
 # Example
-var ourArray = [1,2,3];
-ourArray[1] = 3; # ourArray now equals [1,3,3].
+our_list = [1, 2, 3]
+List.replace_at(our_list, 1, 3)
+# => [1, 3, 3]
 
 # Setup
-var myArray = [1,2,3];
+my_list = [1, 2, 3]
 
 # Only change code below this line.
 
-myArray[0] = 3;
+List.replace_at(my_list, 0, 3)
+# => [3, 2, 3]

@@ -1,12 +1,15 @@
 # URL: https://www.freecodecamp.org/challenges/manipulate-arrays-with-shift
 
+# In Elixir, values are immutable which means we can't modify the original value
+
 # Example
-var ourArray = ["Stimpson", "J", ["cat"]];
-removedFromOurArray = ourArray.shift();
-# removedFromOurArray now equals "Stimpson" and ourArray now equals ["J", ["cat"]].
+our_list = ["Stimpson", "J", ["cat"]]
+removed_from_our_list = List.delete_at(our_list, 0)
+# => ["J", ["cat"]]
 
 # Setup
-var myArray = [["John", 23], ["dog", 3]];
+my_list = [["John", 23], ["dog", 3]]
 
 # Only change code below this line.
-var removedFromMyArray = myArray.shift();
+removed_from_my_list = List.delete_at(my_list, 0)
+# => [["dog", 3]]

@@ -8,9 +8,11 @@ defmodule Words do
   def count(sentence) do
     sentence
       |> String.downcase
-      |> String.split(~r/[:!&@$%^,_ ]/, trim: true)
+      |> String.split(~r/[^[:alpha:]0-9-]/u, trim: true)
       |> Enum.reduce(%{}, &map_word_frequency/2)
   end
 
-  def map_word_frequency(word, map), do: Map.update(map, word, 1, &(&1 + 1))
+  defp map_word_frequency(word, map) do
+    Map.update(map, word, 1, &(&1 + 1))
+  end
 end

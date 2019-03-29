@@ -1,15 +1,12 @@
 # URL: https://www.freecodecamp.org/challenges/comparisons-with-the-logical-and-operator
 
-function testLogicalAnd(val) {
-  # Only change code below this line
-
-  if (val <= 50 && val >= 25) {
-    return "Yes";
-  }
-
-  # Only change code above this line
-  return "No";
-}
+test_logical_and = fn (val) ->
+  if val <= 50 && val >= 25 do
+    "Yes"
+  else
+    "No"
+  end
+end
 
 # Change this value to test
-testLogicalAnd(10);
+test_logical_and.(10) # => "No"

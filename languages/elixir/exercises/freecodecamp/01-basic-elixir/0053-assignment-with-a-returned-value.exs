@@ -1,20 +1,12 @@
 # URL: https://www.freecodecamp.org/challenges/assignment-with-a-returned-value
 
 # Example
-var changed = 0;
+change = fn (num) -> (num + 5) / 3 end
 
-function change(num) {
-  return (num + 5) / 3;
-}
-
-changed = change(10);
+changed = change.(10) # => 5.0
 
 # Setup
-var processed = 0;
-
-function processArg(num) {
-  return (num + 3) / 5;
-}
+process_arg = fn (num) -> (num + 3) / 5 end
 
 # Only change code below this line
-processed = processArg(7);
+processed = process_arg.(7) # => 2.0

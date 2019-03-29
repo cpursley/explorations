@@ -1,14 +1,11 @@
 # URL: https://www.freecodecamp.org/challenges/passing-values-to-functions-with-arguments
 
 # Example
-function ourFunctionWithArgs(a, b) {
-  console.log(a - b);
-}
-ourFunctionWithArgs(10, 5); # Outputs 5
+our_function_with_args = fn (a, b) -> IO.puts(a - b) end
+
+our_function_with_args.(10, 5) # => 5
 
 # Only change code below this line.
-function functionWithArgs(a, b) {
-  console.log(a + b);
-}
+function_with_args = fn (a, b) -> IO.puts(a + b) end
 
-functionWithArgs(3, 7);
+function_with_args.(3, 7) # => 10

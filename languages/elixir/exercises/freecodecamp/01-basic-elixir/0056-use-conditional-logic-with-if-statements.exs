@@ -1,25 +1,22 @@
 # URL: https://www.freecodecamp.org/challenges/use-conditional-logic-with-if-statements
 
 # Example
-function ourTrueOrFalse(isItTrue) {
-  if (isItTrue) {
-    return "Yes, it's true";
-  }
-  return "No, it's false";
-}
+our_true_or_false = fn (is_it_true) ->
+  if is_it_true do
+    "Yes, it's true"
+  else
+    "No, it's false"
+  end
+end
 
 # Setup
-function trueOrFalse(wasThatTrue) {
-
-  # Only change code below this line.
-  if (wasThatTrue) {
-    return "Yes, that was true";
-  } else {
-    return "No, that was false";
-  }
-  # Only change code above this line.
-
-}
+true_or_false = fn (was_that_true) ->
+  if was_that_true do
+    "Yes, that was true"
+  else
+    "No, that was false"
+  end
+end
 
 # Change this value to test
-trueOrFalse(true);
+true_or_false.(true) # => "Yes, that was true"

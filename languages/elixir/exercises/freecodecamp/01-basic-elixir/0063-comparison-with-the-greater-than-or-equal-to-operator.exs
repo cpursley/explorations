@@ -1,16 +1,15 @@
 # URL: https://www.freecodecamp.org/challenges/comparison-with-the-greater-than-or-equal-to-operator
 
-function testGreaterOrEqual(val) {
-  if (val >= 20) {  # Change this line
-    return "20 or Over";
-  }
-
-  if (val >= 10) {  # Change this line
-    return "10 or Over";
-  }
-
-  return "9 or Under";
-}
+test_greater_or_equal = fn (val) ->
+  cond do
+    val >= 20 ->
+      "20 or Over"
+    val >= 10 ->
+      "10 or Over"
+    true ->
+      "9 or Under"
+  end
+end
 
 # Change this value to test
-testGreaterOrEqual(10);
+test_greater_or_equal.(10) # => "10 or Over"

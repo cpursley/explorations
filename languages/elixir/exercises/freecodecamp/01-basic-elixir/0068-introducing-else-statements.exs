@@ -1,18 +1,12 @@
 # URL: https://www.freecodecamp.org/challenges/introducing-else-statements
 
-function testElse(val) {
-  var result = "";
-  # Only change code below this line
-
-  if (val > 5) {
-    result = "Bigger than 5";
-  } else {
-    result = "5 or Smaller";
-  }
-
-  # Only change code above this line
-  return result;
-}
+test_else = fn (val) ->
+  if val > 5 do
+    "Bigger than 5"
+  else
+    "5 or Smaller"
+  end
+end
 
 # Change this value to test
-testElse(4);
+test_else.(4) # => "5 or Smaller"

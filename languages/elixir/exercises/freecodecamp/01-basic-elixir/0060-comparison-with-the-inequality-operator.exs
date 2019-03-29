@@ -1,12 +1,13 @@
 # URL: https://www.freecodecamp.org/challenges/comparison-with-the-inequality-operator
 
 # Setup
-function testNotEqual(val) {
-  if (val != 99) { # Change this line
-    return "Not Equal";
-  }
-  return "Equal";
-}
+test_not_equal = fn (val) ->
+  if val != 99 do
+    "Not Equal"
+  else
+    "Equal"
+  end
+end
 
 # Change this value to test
-testNotEqual(10);
+test_not_equal.(10) # => "Not Equal"

@@ -1,14 +1,16 @@
 # URL: https://www.freecodecamp.org/challenges/introducing-else-if-statements
 
-function testElseIf(val) {
-  if (val > 10) {
-    return "Greater than 10";
-  } else if (val < 5) {
-    return "Smaller than 5";
-  } else {
-    return "Between 5 and 10";
-  }
-}
+# In Elixir, for muliple comparisons, use "cond" or "case" statements
+test_else_if = fn (val) ->
+  cond do
+    val > 10 ->
+      "Greater than 10"
+    val < 5 ->
+      "Smaller than 5"
+    true ->
+      "Between 5 and 10"
+  end
+end
 
 # Change this value to test
-testElseIf(7);
+test_else_if.(7) # => "Between 5 and 10"

@@ -1,12 +1,13 @@
 # URL: https://www.freecodecamp.org/challenges/comparison-with-the-strict-equality-operator
 
 # Setup
-function testStrict(val) {
-  if (val === 7) { # Change this line
-    return "Equal";
-  }
-  return "Not Equal";
-}
+compare_equality = fn (a, b) ->
+  if a == b do
+    "Equal"
+  else
+    "Not Equal"
+  end
+end
 
 # Change this value to test
-testStrict(10);
+compare_equality.(10, "10") # => "Not Equal"

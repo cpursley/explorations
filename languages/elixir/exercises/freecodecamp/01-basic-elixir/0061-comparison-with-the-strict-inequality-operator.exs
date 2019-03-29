@@ -1,17 +1,13 @@
 # URL: https://www.freecodecamp.org/challenges/comparison-with-the-strict-inequality-operator
 
 # Setup
-function testStrictNotEqual(val) {
-  # Only Change Code Below this Line
-
-  if (val !== 17) {
-
-  # Only Change Code Above this Line
-
-    return "Not Equal";
-  }
-  return "Equal";
-}
+test_strict_not_equal = fn (val) ->
+  if val !== 17 do
+    "Not Equal"
+  else
+    "Equal"
+  end
+end
 
 # Change this value to test
-testStrictNotEqual(10);
+test_strict_not_equal.(10) # => "Not Equal"

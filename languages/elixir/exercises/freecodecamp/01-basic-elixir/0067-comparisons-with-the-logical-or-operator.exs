@@ -1,15 +1,12 @@
 # URL: https://www.freecodecamp.org/challenges/comparisons-with-the-logical-or-operator
 
-function testLogicalOr(val) {
-  # Only change code below this line
-
-  if (val < 10 || val > 20) {
-    return "Outside";
-  }
-
-  # Only change code above this line
-  return "Inside";
-}
+test_logical_or = fn (val) ->
+  if val < 10 || val > 20 do
+    "Outside"
+  else
+    "Inside"
+  end
+end
 
 # Change this value to test
-testLogicalOr(15);
+test_logical_or.(15) # => "Inside"

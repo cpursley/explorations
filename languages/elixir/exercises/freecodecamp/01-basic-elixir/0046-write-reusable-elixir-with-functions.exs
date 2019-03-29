@@ -1,15 +1,13 @@
 # URL: https://www.freecodecamp.org/challenges/write-reusable-javascript-with-functions
 
 # Example
-function ourReusableFunction() {
-  console.log("Heyya, World");
-}
 
-ourReusableFunction();
+# Outside of a Module, you can use an Anonymous function.
+our_reusable_function = fn -> IO.puts("Heyya, World") end
+# An Anonymous function is called with the "." syntax
+our_reusable_function.() # => "Heyya, World"
 
 # Only change code below this line
-function reusableFunction() {
-  console.log("Hi World");
-}
+reusable_function = fn -> IO.puts("Hi World") end
 
-reusableFunction();
+reusable_function.() # "Hi World"

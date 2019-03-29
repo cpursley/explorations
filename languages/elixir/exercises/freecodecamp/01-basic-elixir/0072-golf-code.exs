@@ -1,24 +1,25 @@
 # URL: https://www.freecodecamp.org/challenges/golf-code
 
-function golfScore(par, strokes) {
-  # Only change code below this line
-  if (strokes == 1) {
-    return "Hole-in-one!";
-  } else if (strokes <= par - 2) {
-    return "Eagle";
-  } else if (strokes == par - 1) {
-    return "Birdie";
-  } else if (strokes == par) {
-    return "Par";
-  } else if (strokes == par + 1) {
-    return "Bogey";
-  } else if (strokes == par + 2) {
-    return "Double Bogey";
-  } else if (strokes >= par + 3) {
-    return "Go Home!";
-  }
-  # Only change code above this line
-}
+golf_score = fn (par, strokes) ->
+  cond do
+    strokes == 1 ->
+      "Hole-in-one!"
+    strokes <= par - 2 ->
+      "Eagle"
+    strokes == par - 1 ->
+      "Birdie"
+    strokes == par ->
+      "Par"
+    strokes == par + 1 ->
+      "Bogey"
+    strokes == par + 2 ->
+      "Double Bogey"
+    strokes >= par + 3 ->
+      "Go Home!"
+    true ->
+      "else"
+  end
+end
 
 # Change these values to test
-golfScore(5, 4);
+golf_score.(5, 4) # => "Birdie"

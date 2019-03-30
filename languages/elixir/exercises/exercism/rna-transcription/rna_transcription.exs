@@ -9,18 +9,11 @@ defmodule RNATranscription do
   """
   @spec to_rna([char]) :: [char]
   def to_rna(dna) do
-    dna
-      |> Enum.reduce([], &dna_to_rna/2)
-      |> Enum.reverse
-  end
-
-  defp dna_to_rna(dna, acc) do
-    case dna do
-      ?A -> [85 | acc]
-      ?T -> [65 | acc]
-      ?G -> [67 | acc]
-      ?C -> [71 | acc]
-      _ -> acc
-    end
+    Enum.map(dna, fn
+      ?A -> 85
+      ?T -> 65
+      ?G -> 67
+      ?C -> 71
+    end)
   end
 end

@@ -10,10 +10,10 @@ defmodule RNATranscription do
   @spec to_rna([char]) :: [char]
   def to_rna(dna) do
     Enum.map(dna, fn
-      ?A -> 85
-      ?T -> 65
-      ?G -> 67
-      ?C -> 71
+      ?G -> ?C
+      ?C -> ?G
+      ?T -> ?A
+      ?A -> ?U
     end)
   end
 end

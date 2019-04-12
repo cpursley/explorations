@@ -31,7 +31,7 @@ https://codestool.coding-gnome.com/courses/elixir-for-programmers
 ### Exercises
 
 - [Elixir Koans](http://elixirkoans.io): [solutions](exercises/elixir-koans)
-- [Free Code Camp Problems (in Elixir)](https://learn.freecodecamp.org)
 - [Exercism](https://exercism.io/tracks/elixir): [solutions](exercises/exercism)
 - [Code Wars](https://www.codewars.com/?language=elixir)
 - [Advent Of Code](https://adventofcode.com): [solutions](exercises/advent-of-code)
+- Project Euler

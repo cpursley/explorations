@@ -21,11 +21,10 @@
 
 #### Video
 
-- [Developing With Elixir/OTP](https://pragmaticstudio.com/courses/elixir) (paid ~ course that goes into great detail) [solutions](courses/pragmaticstudio)
+- [Developing With Elixir/OTP](https://pragmaticstudio.com/courses/elixir) (paid ~ course that goes into great detail)
+- [Elixir for Programmers](https://codestool.coding-gnome.com/courses/elixir-for-programmers) (paid ~ another great video course)
 - [Elixir Sips](http://elixirsips.com/episodes.html) (paid ~ short screencasts on various Elixir topics)
 - [Alchemist Camp](https://alchemist.camp/start) (free & paid ~ resources for learning Elixir)
-
-https://codestool.coding-gnome.com/courses/elixir-for-programmers
 
 ### Exercises
 

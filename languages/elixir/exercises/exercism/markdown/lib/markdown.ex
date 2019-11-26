@@ -14,14 +14,13 @@ defmodule Markdown do
   def parse(markdown) do
     markdown
     |> String.split("\n")
-    |> Enum.map(&process/1)
-    |> Enum.join()
+    |> Enum.map_join(&process/1)
     |> replace_markdown()
   end
 
   defp process("#" <> _ = text), do: process_header(text)
   defp process("*" <> _ = text), do: process_list(text)
-  defp process(text),            do: process_text(text)
+  defp process(text),            do: process_paragraph(text)
 
   defp process_header(header_text) do
     [hd | txt] = String.split(header_text)
@@ -35,7 +34,7 @@ defmodule Markdown do
     "<li>" <> String.trim_leading(list_text, "* ") <> "</li>"
   end
 
-  defp process_text(text), do: "<p>#{text}</p>"
+  defp process_paragraph(text), do: "<p>#{text}</p>"
 
   defp replace_markdown(string) do
     string

@@ -10,16 +10,15 @@
 
 defmodule Problem004 do
   def exec(list) do
-    list_sorted = Enum.sort(list)
-
     list_head =
-      list_sorted
+      list
+      |> Enum.sort()
       |> Enum.filter(fn i -> i >= 1 end)
       |> hd
 
     new_list =
       list_head..length(list) |> Enum.to_list
 
-    (new_list -- list_sorted) |> hd
+    (new_list -- list) |> hd
   end
 end
